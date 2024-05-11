@@ -23,10 +23,10 @@
 define( 'DB_NAME', 'solaris' );
 
 /** Имя пользователя базы данных */
-define( 'DB_USER', 'solaris-admin' );
+define( 'DB_USER', 'root' );
 
 /** Пароль к базе данных */
-define( 'DB_PASSWORD', 'adminsol2024' );
+define( 'DB_PASSWORD', '' );
 
 /** Имя сервера базы данных */
 define( 'DB_HOST', 'localhost' );
