@@ -1,8 +1,13 @@
 <?php
-get_header();
+/**
+ * Title: Default Footer
+ * Slug: twentytwentythree/footer-default
+ * Categories: footer
+ * Block Types: core/template-part/footer
+ */
 ?>
+
 <p style="width: 200%;">Вывод всех пользователей и некоторых данных по ним (Сортировку через передачу значения переменной или поиск через передачу значения можно сделать (но чуть позже))</p>
-<br>
 <p style="width: 200%;">
 	<?php
 	//______________________________________________________ПОДКЛЮЧЕНИЕ К БД______________________________________________________
@@ -47,7 +52,7 @@ get_header();
 						foreach ($user_roles as $role) {
 							$role_obj = get_role($role);
 							if ($role_obj) {
-								echo wp_roles()->roles[$role_obj->name]['name']. "<br>". "<br>";
+								echo wp_roles()->roles[$role_obj->name]['name']. "<br>";
 							}
 						}
 					}
@@ -63,45 +68,3 @@ get_header();
 	?>
 	
 </p>
-<!-- <main id="primary" class="site-main">
-
-	<?php
-	// if (have_posts()) :
-
-	// 	if (is_home() && !is_front_page()) :
-	?>
-			<header>
-				<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-			</header>
-	<?php
-	// endif;
-
-	// /* Start the Loop */
-	// while (have_posts()) :
-	// 	the_post();
-
-	/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-	// 			 */
-	// 		get_template_part('template-parts/content', get_post_type());
-
-	// 	endwhile;
-
-	// 	the_posts_navigation();
-
-	// else :
-
-	// 	get_template_part('template-parts/content', 'none');
-
-	// endif;
-	?>
-
-</main> -->
-
-<?php
- include 'form.php';
-
-// get_sidebar();
-get_footer();
